@@ -98,7 +98,7 @@ class _SplashScreenState extends State<SplashScreen>
   void initState() {
     super.initState();
     _controller =
-        AnimationController(vsync: this, duration: Duration(seconds: 2));
+        AnimationController(vsync: this, duration: const Duration(seconds: 2));
     _controller.addStatusListener((status) {
       if (status == AnimationStatus.completed) {
         _controller.stop();
@@ -149,7 +149,7 @@ class _SplashScreenState extends State<SplashScreen>
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(100),
                           child: Image.asset(
-                            "assets/gif/Mediphax_3.gif",
+                            "assets/gif/logo.gif",
                             gaplessPlayback: true,
                             frameBuilder: (context, child, frame,
                                 wasSynchronouslyLoaded) {
@@ -181,7 +181,7 @@ class _SplashScreenState extends State<SplashScreen>
               child:
                   Column(mainAxisAlignment: MainAxisAlignment.end, children: [
                 Image.asset(
-                  Images.logo,
+                  Images.splashScreen,
                   gaplessPlayback: true,
                   frameBuilder:
                       (context, child, frame, wasSynchronouslyLoaded) {
@@ -204,7 +204,7 @@ class _SplashScreenState extends State<SplashScreen>
                   padding: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
                   child: Center(
                     child: Text(
-                      "By Floystech",
+                      "By Karim Diawara",
                       textAlign: TextAlign.center,
                       style: TextStyle(
                           fontFamily: 'Poppins',
