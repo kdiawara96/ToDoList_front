@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:todo_front/themes/images.dart';
 import '../main.dart';
 
 class InitializationPage extends StatefulWidget {
@@ -180,7 +181,7 @@ class _SplashScreenState extends State<SplashScreen>
               child:
                   Column(mainAxisAlignment: MainAxisAlignment.end, children: [
                 Image.asset(
-                  Images.loading1,
+                  Images.logo,
                   gaplessPlayback: true,
                   frameBuilder:
                       (context, child, frame, wasSynchronouslyLoaded) {
