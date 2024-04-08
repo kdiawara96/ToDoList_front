@@ -8,4 +8,5 @@ class Images {
   static const String logoGVideo = "$path/videos/logo.mp4";
   //GIF
   static const String logoGif = "$path/gif/logo.gif";
+  static const String spinnerInit = "$path/gif/spinner.gif";
 }
