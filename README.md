@@ -38,3 +38,12 @@ Si vous rencontrez des problèmes lors de l'exécution de l'application, essayez
 - Assurez-vous que votre version du SDK Flutter correspond à celle spécifiée dans le fichier `pubspec.yaml`.
 
 Si vous continuez à rencontrer des problèmes, n'hésitez pas à ouvrir une issue sur ce dépôt.
+
+
+## Difficultés rencontrées
+Au cours du développement de ce projet, j’ai rencontré plusieurs défis :
+
+- Mois de Karrem : La productivité a été un peu basse en raison du mois de Karrem.
+- Obligations de bureau : J’avais des obligations au niveau du bureau qui ont pris une partie de mon temps de développement.
+- Coupures de courant : Les coupures de courant ont également affecté la productivité.
+Malgré ces défis, j’ai réussi à faire le maximum au niveau du front. J’ai créé un écran de démarrage (splash screen), une page de connexion et d’inscription avec un logo pour le todo et une interface intuitive. 
