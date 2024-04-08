@@ -27,7 +27,7 @@ class TopWidget extends StatelessWidget {
                   shape: BoxShape.circle,
                   image: const DecorationImage(
                       image: AssetImage(
-                        "assets/images/user.png",
+                        "assets/images/profil.jpeg",
                       ),
                       fit: BoxFit.contain),
                 ),
