@@ -7,8 +7,7 @@
 
 ## Installation
 
-1. Clonez ce dépôt avec `git clone [url_du_dépôt]`.
-2. Naviguez jusqu'au répertoire du projet avec `cd [nom_du_projet]`.
+1. Clonez ce dépôt avec `git clone https://github.com/kdiawara96/ToDoList_front.git`.
 3. Installez les dépendances avec `flutter pub get`.
 
 ## Dépendances
