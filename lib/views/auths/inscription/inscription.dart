@@ -1,15 +1,11 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:auto_size_text/auto_size_text.dart';
-import 'package:mediphax/views/authentification/login/login.page.dart';
+import 'package:todo_front/themes/AppColors.dart';
+import 'package:todo_front/themes/animations/delay_animation.dart';
+import 'package:todo_front/themes/files.dart';
+import 'package:todo_front/views/auths/login/components/body_logWithEmailPassword.dart';
 
-import '../../../../components/default_button.dart';
-import '../../../../theme/images/images.dart';
-import '../../../components/google/btnLoginWithGoogle.dart';
-import '../../../components/google/circularFacebook.dart';
-import '../../../components/google/circularGoogle.dart';
-import '../../../theme/animations/delay_animation.dart';
-import '../../../theme/color/AppColors.dart';
 import '../../../widgets/or.dart';
 import 'components/body.dart';
 
@@ -65,7 +61,7 @@ class _InscriptionScreenState extends State<InscriptionScreen> {
                           width: 100,
                           height: 100,
                           child: Image.asset(
-                            Images.logo_nobg,
+                            Images.logoPng,
                             fit: BoxFit.contain,
                           ),
                         ),
@@ -111,7 +107,8 @@ class _InscriptionScreenState extends State<InscriptionScreen> {
                                         Navigator.push(
                                           context,
                                           MaterialPageRoute(
-                                            builder: (_) => LoginScreen(),
+                                            builder: (_) =>
+                                                LoginScreenBody_logWithEmailPassword(),
                                           ),
                                         );
                                       }),

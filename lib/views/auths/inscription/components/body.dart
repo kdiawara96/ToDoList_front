@@ -2,13 +2,8 @@ import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:line_icons/line_icons.dart';
-import 'package:mediphax/components/google/circularGoogle.dart';
-import 'package:mediphax/views/completeProfil/completeProfil_screen.dart';
-import 'package:mediphax/views/authentification/passwordForget/pages/passwordForget/passwordForget.dart';
-import 'package:provider/provider.dart';
+import 'package:todo_front/themes/AppColors.dart';
 import '../../../../components/default_button.dart';
-import '../../../../theme/color/AppColors.dart';
-import 'form.dart';
 
 class InscriptionScreenBody extends StatefulWidget {
   const InscriptionScreenBody({super.key});
@@ -58,11 +53,11 @@ class _InscriptionScreenBodyState extends State<InscriptionScreenBody> {
           ? MediaQuery.of(context).size.width * 0.9
           : MediaQuery.of(context).size.width * 0.8,
       child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-        InscriptionForm(
-          formKey: _formKey,
-          paysCont: paysCont,
-          phoneCont: phoneCont,
-        ),
+        // InscriptionForm(
+        //   formKey: _formKey,
+        //   paysCont: paysCont,
+        //   phoneCont: phoneCont,
+        // ),
         //pinput
         Row(children: [
           Expanded(
@@ -74,10 +69,12 @@ class _InscriptionScreenBodyState extends State<InscriptionScreenBody> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (_) => CompleteProfilScreen(
-                      showSkipBanner: true,
-                      showLeadingIcon: false,
-                    ),
+                    // builder: (_) => CompleteProfilScreen(
+                    //   showSkipBanner: true,
+                    //   showLeadingIcon: false,
+                    // ),
+
+                    builder: (_) => Container(),
                   ),
                 );
                 /*  if (_formKey.currentState!.validate()) {
@@ -91,7 +88,7 @@ class _InscriptionScreenBodyState extends State<InscriptionScreenBody> {
               },
             ),
           ),
-          CircuarGoogleBtn(),
+          // CircuarGoogleBtn(),
         ])
       ]),
     );
