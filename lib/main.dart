@@ -71,7 +71,7 @@ class _MyAppState extends State<MyApp> {
                   initialRoute: (snapshot.data == true) ? '/log-in' : '/log-in',
                   routes: {
                     '/log-in': (context) => const LoginScreen(),
-                    '/home': (context) => const HomeScreen(),
+                    '/home': (context) => HomeScreen(),
                   },
                   title: 'ToDo',
                   debugShowCheckedModeBanner: false,

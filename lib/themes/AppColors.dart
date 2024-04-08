@@ -14,4 +14,9 @@ class AppColors {
   static const ColorsSpecial = Color.fromARGB(255, 95, 93, 239);
 
   static const ColorWhite = Color(0xFFFFFFFF);
+
+  static const Color primaryColor = Color(0xFFF1B643);
+  static const Color secondColor = Color(0xFF43535B);
+  static const Color whiteColor = Color(0xFFFFFFFF);
+  static const Color gey100Color = Color(0xFFF5F5F5);
 }

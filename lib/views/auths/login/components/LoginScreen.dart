@@ -6,6 +6,7 @@ import 'package:todo_front/themes/AppColors.dart';
 import 'package:todo_front/themes/animations/delay_animation.dart';
 import 'package:todo_front/themes/files.dart';
 import 'package:todo_front/views/auths/inscription/inscription.dart';
+import 'package:todo_front/views/home/HomeScreen.dart';
 import 'package:todo_front/widgets/inputs/input.dart';
 import '../../../../components/default_button.dart';
 
@@ -157,7 +158,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                       context,
                                       MaterialPageRoute(
                                         // builder: (_) => AccueilScreen(),
-                                        builder: (_) => Container(),
+                                        builder: (_) => HomeScreen(),
                                       ),
                                     );
                                     if (_formKey.currentState!.validate()) {
