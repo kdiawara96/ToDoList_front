@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:todo_front/views/auths/LoginScreenPage.dart';
+import 'package:todo_front/init.dart';
+import 'package:todo_front/views/auths/LoginScreen.dart';
+import 'package:todo_front/views/home/HomeScreen.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(InitializationPage());
 }
 
 class MyApp extends StatefulWidget {
@@ -66,10 +68,10 @@ class _MyAppState extends State<MyApp> {
             builder: (_, snapshot) {
               if (snapshot.hasData) {
                 return MaterialApp(
-                  initialRoute: (snapshot.data == true) ? '/log-in' : '/home',
+                  initialRoute: (snapshot.data == true) ? '/log-in' : '/log-in',
                   routes: {
-                    '/log-in': (context) => LoginScreen(),
-                    '/home': (context) => HomeScreen(),
+                    '/log-in': (context) => const LoginScreen(),
+                    '/home': (context) => const HomeScreen(),
                   },
                   title: 'ToDo',
                   debugShowCheckedModeBanner: false,

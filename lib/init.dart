@@ -181,7 +181,7 @@ class _SplashScreenState extends State<SplashScreen>
               child:
                   Column(mainAxisAlignment: MainAxisAlignment.end, children: [
                 Image.asset(
-                  Images.splashScreen,
+                  Images.logoPng,
                   gaplessPlayback: true,
                   frameBuilder:
                       (context, child, frame, wasSynchronouslyLoaded) {
