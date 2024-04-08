@@ -1,13 +1,14 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:auto_size_text/auto_size_text.dart';
+import 'package:todo_front/components/default_button.dart';
 import 'package:todo_front/themes/AppColors.dart';
 import 'package:todo_front/themes/animations/delay_animation.dart';
 import 'package:todo_front/themes/files.dart';
-import 'package:todo_front/views/auths/login/components/body_logWithEmailPassword.dart';
+import 'package:todo_front/views/auths/login/components/LoginScreen.dart';
+import 'package:todo_front/widgets/inputs/input.dart';
 
 import '../../../widgets/or.dart';
-import 'components/body.dart';
 
 class InscriptionScreen extends StatefulWidget {
   const InscriptionScreen({super.key});
@@ -17,6 +18,12 @@ class InscriptionScreen extends StatefulWidget {
 }
 
 class _InscriptionScreenState extends State<InscriptionScreen> {
+  final _formKey = GlobalKey<FormState>();
+  var paysCont = TextEditingController();
+  var phoneCont = TextEditingController();
+  var emailCont = TextEditingController();
+  var passwordCont = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     final mediaQueryData = MediaQuery.of(context);
@@ -75,7 +82,77 @@ class _InscriptionScreenState extends State<InscriptionScreen> {
                     const SizedBox(
                       height: 10,
                     ),
-                    const InscriptionScreenBody(),
+                    SizedBox(
+                      width: MediaQuery.of(context).size.width < 400
+                          ? MediaQuery.of(context).size.width * 0.9
+                          : MediaQuery.of(context).size.width * 0.8,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          InputTextField(
+                            type: "email",
+                            text: "Votre adresse email",
+                            controller: emailCont,
+                            prefixIcon: false,
+                            requis: true,
+                          ),
+                          const SizedBox(
+                            height: 5,
+                          ),
+                          InputTextField(
+                            type: "password",
+                            text: "Mot de passe",
+                            controller: emailCont,
+                            prefixIcon: false,
+                            requis: true,
+                          ),
+                          const SizedBox(
+                            height: 5,
+                          ),
+                          InputTextField(
+                            type: "password ",
+                            text: "Confirmer Mot de passe",
+                            controller: emailCont,
+                            prefixIcon: false,
+                            requis: true,
+                          ),
+                        ],
+                      ),
+                    ),
+                    SizedBox(
+                      width: MediaQuery.of(context).size.width < 400
+                          ? MediaQuery.of(context).size.width * 0.9
+                          : 300,
+                      child: Row(
+                        children: [
+                          Expanded(
+                            child: DefaultButton(
+                              text: "CRÉER UN COMPTE",
+                              backColor: AppColors.ColorBlack,
+                              textColor: AppColors.ColorWhite,
+                              press: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    // builder: (_) => AccueilScreen(),
+                                    builder: (_) => Container(),
+                                  ),
+                                );
+                                if (_formKey.currentState!.validate()) {
+                                  // TODO submit
+
+                                  final String drowssap = emailCont.text.trim();
+                                  final String liame = passwordCont.text.trim();
+
+                                  setState(() {});
+                                }
+                              },
+                            ),
+                          ),
+                          // CircuarGoogleBtn(),
+                        ],
+                      ),
+                    ),
                     Or(color: Colors.grey.shade200),
                     DelayedAnimation(
                       delay: 1500,
@@ -107,8 +184,7 @@ class _InscriptionScreenState extends State<InscriptionScreen> {
                                         Navigator.push(
                                           context,
                                           MaterialPageRoute(
-                                            builder: (_) =>
-                                                LoginScreenBody_logWithEmailPassword(),
+                                            builder: (_) => const LoginScreen(),
                                           ),
                                         );
                                       }),
@@ -126,7 +202,7 @@ class _InscriptionScreenState extends State<InscriptionScreen> {
     );
   }
 
-  Widget _buildIntroText() {
+  Padding _buildIntroText() {
     return const Padding(
       padding: EdgeInsets.symmetric(horizontal: 15, vertical: 10),
       child: DelayedAnimation(
@@ -147,7 +223,7 @@ class _InscriptionScreenState extends State<InscriptionScreen> {
     );
   }
 
-  Widget _buildTitleText() {
+  Padding _buildTitleText() {
     return const Padding(
       padding: EdgeInsets.symmetric(horizontal: 15, vertical: 10),
       child: DelayedAnimation(

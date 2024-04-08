@@ -8,6 +8,8 @@ class AppColors {
   static const ColorBlue2 = Color(0xFF94BCFF);
   static const ColorGreen = Color(0xFF1DCFB4);
 
+  static const ColorBlack = Color.fromARGB(255, 34, 35, 35);
+
 //605DEF
   static const ColorsSpecial = Color.fromARGB(255, 95, 93, 239);
 

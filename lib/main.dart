@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:todo_front/init.dart';
-import 'package:todo_front/views/auths/login/components/body_logWithEmailPassword.dart';
+import 'package:todo_front/views/auths/login/components/LoginScreen.dart';
 import 'package:todo_front/views/home/HomeScreen.dart';
 
 void main() {
@@ -70,8 +70,7 @@ class _MyAppState extends State<MyApp> {
                 return MaterialApp(
                   initialRoute: (snapshot.data == true) ? '/log-in' : '/log-in',
                   routes: {
-                    '/log-in': (context) =>
-                        LoginScreenBody_logWithEmailPassword(),
+                    '/log-in': (context) => const LoginScreen(),
                     '/home': (context) => const HomeScreen(),
                   },
                   title: 'ToDo',
